@@ -1,6 +1,4 @@
-# README
-
-## Receipt and Audio Analyzer
+# Receipt and Audio Analyzer
 
 This project is a Streamlit web application that allows users to upload receipts in image or PDF format and audio files for automatic text extraction, analysis, and data storage. The app leverages various APIs and libraries to achieve its functionalities, including Google Cloud Vision, Google Cloud Speech-to-Text, and OpenAI.
 
