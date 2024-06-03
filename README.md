@@ -1,69 +1,73 @@
-# Prototypes Repository
+## Customer Churn Label Prediction
 
-Welcome to the Prototypes repository! This repository serves as a collection of prototype projects that I am currently working on, primarily using Python as the coding language. These projects leverage two different libraries for building interactive web applications: Streamlit and Dash. Each project in this repository is designed to explore different use cases and functionalities, ranging from data analysis and machine learning to natural language processing (GPT 4o) and computer vision (Google Vision).
+This project consists of a machine learning model for predicting customer churn and a Streamlit web application to interact with the model. The model is trained on a telecommunications dataset, and the app provides functionalities for filtering and displaying data, visualizing insights, and predicting churn for new customers.
 
-## Projects
+### Features
 
-1. **NBA Trade Advisor**
-   - **Description:** An interactive web application built with Streamlit that provides NBA player statistics and allows users to analyze potential trade scenarios. The app uses OpenAI's GPT-4 API to generate insights about the pros and cons of proposed trades.
-   - **Features:** 
-     - View and filter player stats
-     - Add and save custom playing style descriptions
-     - Analyze potential trades with AI-generated insights
+- **Data Filtering and Display**: Filter data based on various criteria and display it in a tabular format.
+- **Insights and Visualizations**: Visualize distributions, relationships between features and churn, and a correlation matrix.
+- **Churn Prediction**: Predict churn for a new customer based on input features.
+- **Map Visualization**: Display customers on a map, color-coded by predicted churn status.
 
-2. **Grocery Tracker**
-   - **Description:** A web application designed to track grocery purchases by uploading pictures of receipts. The app extracts information from the receipts and stores it in a CSV file. There is also a beta feature for extracting information from audio inputs.
-   - **Features:**
-     - Upload and process receipt images
-     - Store product information in a CSV file
-     - Beta: Extract information from audio inputs
+### Setup and Configuration
 
-3. **Predicting Churn Label**
-   - **Description:** A Streamlit app aimed at providing telco managers with insights into customer churn. The app includes a pipeline for training a machine learning model to predict churn and offers various data visualizations and insights.
-   - **Features:**
-     - Train and evaluate churn prediction models
-     - Visualize customer data and churn insights
-     - Provide actionable insights for reducing churn
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/yourusername/customer-churn-prediction.git
+    cd customer-churn-prediction
+    ```
 
-4. **Customer Care Chatbot**
-   - **Description:** A chatbot application designed to simulate customer care interactions for a company. The chatbot can handle common customer inquiries and provide relevant responses.
-   - **Features:**
-     - Simulate customer care interactions
-     - Provide automated responses to common inquiries
-     - Enhance customer service experience
+2. **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Technologies and Libraries
+3. **Prepare the Dataset**:
+    - Place the `telco.csv` dataset in the root directory of the project.
 
-- **Python:** The primary programming language used for all projects.
-- **Streamlit:** Used for building interactive web applications for the NBA Trade Advisor and Predicting Churn Label projects.
-- **Dash:** Used for other interactive applications that may require more advanced functionalities and customizations.
+4. **Train the Model**:
+    - Run the model training script to train and save the model pipeline.
+    ```bash
+    python train_model.py
+    ```
 
-## Installation and Usage
+5. **Run the Streamlit Application**:
+    ```bash
+    streamlit run app.py
+    ```
 
-To get started with any of the projects, follow the steps below:
+### Usage
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/Prototypes.git
-   cd Prototypes
-   ```
+1. **Filtering and Displaying Data**:
+    - Navigate to the "Filter and Display Data" section.
+    - Apply filters using the sidebar widgets.
+    - View the filtered data in a table and download it as a CSV file.
+    - Visualize customer locations on a map.
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd <project_name>
-   ```
+2. **Insights and Visualizations**:
+    - Navigate to the "Insights and Visualizations" section.
+    - Select numerical or categorical features to visualize their distribution and relationship with churn.
+    - View the correlation matrix of numerical features.
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r req.txt
-   ```
+3. **Predict Churn for a New Customer**:
+    - Navigate to the "Predict Churn for a New Customer" section.
+    - Enter feature values for the new customer.
+    - Click "Predict Churn" to see the prediction and probability.
 
-4. **Run the app:**
-   ```bash
-   streamlit run app.py  # For Streamlit apps
-   dash run app.py       # For Dash apps (assuming appropriate command)
-   ```
+### File Structure
 
-## Contribution
+- `app.py`: Main script for running the Streamlit application.
+- `train_model.py`: Script for training the machine learning model.
+- `requirements.txt`: List of dependencies required for the project.
+- `telco.csv`: Dataset for training and evaluating the model.
+- `churn_model_pipeline.pkl`: Saved model pipeline for churn prediction.
 
-Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
+### Dependencies
+
+- `streamlit`
+- `pandas`
+- `joblib`
+- `pydeck`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn`
