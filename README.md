@@ -1,6 +1,6 @@
 # NBA Player Stats and Trade Analysis App
 
-This project is a Streamlit-based web application designed to provide an interactive interface for viewing and analyzing NBA player statistics. Users can explore player data, add custom playing style descriptions, and analyze potential trade scenarios using OpenAI's GPT-4 API. The app aims to assist basketball managers and enthusiasts in making informed decisions about player trades and team compositions.
+This project is a Streamlit-based web application designed to provide an interactive interface for viewing and analyzing NBA player statistics. Users can explore player data, add custom playing style descriptions, and analyze potential trade scenarios using OpenAI's GPT-4o API. The app aims to assist basketball managers and enthusiasts in making informed decisions about player trades and team compositions.
 
 ## Features
 
