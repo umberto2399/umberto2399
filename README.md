@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @umberto2399
+- 👀 I’m interested in Prototypes and ML applied into the business realm.
+- 🌱 I’m currently learning how to detect Sarcasm in text and how to leverage AI into prototypes. 
+- 💞️ I’m looking to collaborate on any type of projects that involved prototyping.
+- 📫 How to reach me: umberto.cirilli@alumni.esade.edu
