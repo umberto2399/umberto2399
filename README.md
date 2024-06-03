@@ -44,8 +44,8 @@ To get started with any of the projects, follow the steps below:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/prototypes.git
-   cd prototypes
+   git clone https://github.com/yourusername/Prototypes.git
+   cd Prototypes
    ```
 
 2. **Navigate to the project directory:**
@@ -55,7 +55,7 @@ To get started with any of the projects, follow the steps below:
 
 3. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip install -r req.txt
    ```
 
 4. **Run the app:**
