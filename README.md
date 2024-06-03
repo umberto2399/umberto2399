@@ -13,13 +13,13 @@ This project consists of a machine learning model for predicting customer churn 
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/customer-churn-prediction.git
-    cd customer-churn-prediction
+    git clone https://github.com/yourusername/Churn-Label-Predictor.git
+    cd Churn-Label-Predictor
     ```
 
 2. **Install Dependencies**:
     ```bash
-    pip install -r requirements.txt
+    pip install -r re.txt
     ```
 
 3. **Prepare the Dataset**:
@@ -28,7 +28,7 @@ This project consists of a machine learning model for predicting customer churn 
 4. **Train the Model**:
     - Run the model training script to train and save the model pipeline.
     ```bash
-    python train_model.py
+    python model.py
     ```
 
 5. **Run the Streamlit Application**:
