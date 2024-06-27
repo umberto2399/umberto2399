@@ -4,4 +4,4 @@ plotly
 google-cloud-speech
 google-cloud-vision
 openai
-pydub
+PyMuPDF
