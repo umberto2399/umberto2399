@@ -2,101 +2,119 @@
 
 ## Overview
 
-The **Receipt and Audio Analyzer** application is designed to help users analyze their grocery receipts and audio recordings to track their expenses. This tool allows users to upload images or PDFs of their receipts, as well as audio files, and automatically extracts and saves the data. Users can visualize their expenses over time and get detailed insights into their spending habits.
+The Receipt and Audio Analyzer is a web application designed to help users extract and analyze data from receipts and audio files. The app leverages Google Cloud's Vision and Speech APIs to process images and audio, and OpenAI's GPT model to analyze and categorize the extracted data. Users can visualize expenses over time, filter data by various criteria, and ask questions about their expenses.
 
 ## Features
 
-- **Analyze Receipts**: Upload images, PDFs, or audio recordings of receipts to extract and save the data.
-- **Expenses Over Time**: Visualize spending trends and categorize expenses.
-- **Ask a Question**: Get insights based on spending data through a question-answer interface.
+1. **Analyze Receipts**:
+   - Upload an image or PDF of a receipt.
+   - Extract text using Google Cloud Vision API.
+   - Analyze the extracted text to categorize products and save data to a CSV file.
 
-## Requirements
+2. **Audio Transcription**:
+   - Upload an audio file.
+   - Transcribe audio using Google Cloud Speech-to-Text API.
+   - Analyze the transcribed text to categorize products and save data to a CSV file.
 
-- Python 3.x
-- Streamlit
-- pandas
-- plotly
-- google-cloud-speech
-- google-cloud-vision
-- openai
-- PyMuPDF (fitz)
+3. **Visualization of Expenses Over Time**:
+   - Visualize expenses over time with interactive charts.
+   - Filter data by date range and category.
+   - Display product purchase frequency with bar charts.
 
-## Setup
+4. **Ask a Question**:
+   - Generate summary statistics from the data.
+   - Use OpenAI's GPT model to answer user questions about their expenses.
+   - Perform advanced searches based on user-defined criteria.
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/receipt-audio-analyzer.git
-    cd receipt-audio-analyzer
-    ```
+## Files in the Repository
 
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+- `app.py`: The main Streamlit application script.
+- `csv_app_eng_final.csv`: The file to store extracted receipt data.
+- `requirements-3.txt`: A list of Python dependencies required to run the app.
+- `Landing page.jpeg`: The landing page image displayed in the app.
 
-3. Set up your Google Cloud Vision and Speech service key:
-    - Download your Google Cloud service account key JSON file and save it in a secure location.
-    - Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to point to your JSON key file.
-    ```bash
-    export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/google-cloud-service-key.json"
-    ```
+## Installation and Setup
 
-4. Configure your OpenAI API key:
-    - Set your OpenAI API key in the `OpenAI` client initialization.
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
+   ```
 
-## Usage
+2. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
 
-1. Run the Streamlit app:
-    ```bash
-    streamlit run app.py
-    ```
+3. **Install the required dependencies**:
+   ```bash
+   pip install -r requirements-3.txt
+   ```
 
-2. Open your browser and navigate to the URL provided by Streamlit (usually `http://localhost:8501`).
+4. **Configure API keys**:
+   - Open `app.py` and replace `INSERT YOUR OPENAI API KEY HERE` with your actual OpenAI API key.
+   - Set the path to your Google Cloud Vision and Speech service key in the `os.environ["GOOGLE_APPLICATION_CREDENTIALS"]` line.
 
-3. Use the tabs to navigate through the functionalities:
-    - **Welcome**: Introduction and instructions on how to use the app.
-    - **Analyze Receipts**: Upload and analyze your receipts.
-    - **Expenses Over Time**: Visualize your spending trends.
-    - **Ask a Question**: Get insights based on your spending data.
+5. **Run the app**:
+   ```bash
+   streamlit run app.py
+   ```
 
-## Code Structure
+6. **Access the app**:
+   - Open your web browser and navigate to `http://localhost:8501`.
 
-- `app.py`: Main Streamlit application file.
-- `requirements.txt`: List of required Python packages.
-- `data/`: Directory to store CSV files and other data.
-- `assets/`: Directory for images and other static assets.
+## How to Use the App
 
-## Example Questions
+### Welcome Tab
 
-- **General Spending Questions**:
-    - "What is my total spending for the current month?"
-    - "How much did I spend last month?"
-    - "What is the total amount spent on meat this month?"
+1. **Introduction**:
+   - Provides an overview of the application.
+   - Displays an image related to the app.
 
-- **Comparison Questions**:
-    - "How does my spending this month compare to last month?"
-    - "What is my average daily spending for the current month?"
+### Analyze Receipts
 
-- **Most Frequent Purchases**:
-    - "Which product did I buy the most last month?"
-    - "Which supermarket do I visit most often?"
+1. **Upload an Image or PDF of a Receipt**:
+   - Use the file uploader to upload a receipt image or PDF.
+   - The extracted text from the receipt will be displayed.
 
-- **Specific Date Range Analysis**:
-    - "What is my total spending from 1st to 15th of this month?"
-    - "How much did I spend on dairy products between 10th and 20th of last month?"
+2. **Analyze the Extracted Text**:
+   - Click the "Analyze Text" button to analyze the extracted text using OpenAI GPT.
+   - The analyzed data will be displayed.
 
-- **Payment Method Insights**:
-    - "What is the total amount spent using credit cards this month?"
-    - "How much did I spend using cash in the last month?"
+3. **Confirm and Save Data**:
+   - The analyzed data is automatically saved to a CSV file.
+   - Download the updated CSV file if needed.
 
-- **Expense Breakdown**:
-    - "Can you provide a detailed breakdown of my spending for the last week?"
-    - "What are the top 5 most expensive items I bought this month?"
+4. **Audio Transcription**:
+   - Upload an audio file and the app will transcribe it.
+   - Click the "Analyze Transcription" button to analyze the transcribed text.
+   - The analyzed data is automatically saved to a CSV file.
 
-- **Visualization-Driven Questions**:
-    - "Show me a graph of my spending over the last month."
-    - "Can you display a bar chart of my spending by category for this month?"
+### Expenses Over Time
 
-## Contributing
+1. **Visualize Expenses**:
+   - Select a time range from the dropdown menu to filter the data.
+   - View the expenses over time with interactive charts.
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+2. **Category and Product Analysis**:
+   - Filter data by category and visualize the purchase frequency of products within that category.
+
+### Ask a Question
+
+1. **Ask a Question About Your Expenses**:
+   - Enter a question in the text input box.
+   - The app will generate a response based on the summary statistics and the last receipt details.
+
+2. **Advanced Search**:
+   - If the initial answer does not satisfy the query, perform an advanced search by specifying date range and category.
+
+## Known Issues
+
+- **ChatGPT Output Formatting**: The format of the output generated by ChatGPT-4o may not always adhere to the expected structure. This remains a known issue and further improvements are needed to ensure consistent formatting.
+
+## Conclusion
+
+The Receipt and Audio Analyzer provides a comprehensive tool for extracting and analyzing data from receipts and audio files. The app leverages advanced AI and machine learning models to provide detailed insights into expenses, helping users manage their finances more effectively. Further improvements and iterations will continue to enhance the user experience and address any existing challenges.
+
+---
