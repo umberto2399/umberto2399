@@ -12,7 +12,7 @@ The Receipt and Audio Analyzer is a web application designed to help users extra
    - Analyze the extracted text to categorize products and save data to a CSV file.
 
 2. **Audio Transcription**:
-   - Upload an audio file.
+   - Upload an audio file in .wav format.
    - Transcribe audio using Google Cloud Speech-to-Text API.
    - Analyze the transcribed text to categorize products and save data to a CSV file.
 
