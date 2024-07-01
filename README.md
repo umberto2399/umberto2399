@@ -112,6 +112,6 @@ The Receipt and Audio Analyzer is a web application designed to help users extra
 
 ## Conclusion
 
-The Receipt and Audio Analyzer provides a comprehensive tool for extracting and analyzing data from receipts and audio files. The app leverages advanced AI and machine learning models to provide detailed insights into expenses, helping users manage their finances more effectively. Further improvements and iterations will continue to enhance the user experience and address any existing challenges.
+The Receipt and Audio Analyzer provides a comprehensive tool for extracting and analyzing data from receipts and audio files. The app leverages GEN AI to provide detailed insights into expenses, helping users manage their finances more effectively. Further improvements and iterations will continue to enhance the user experience and address any existing challenges.
 
 ---
